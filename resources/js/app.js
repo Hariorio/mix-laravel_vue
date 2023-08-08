@@ -23,9 +23,9 @@ import Memek from "./components/Memek.vue";
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('header-component', require('./components/Header.vue').default);
-Vue.component('navbar-component', require('./components/navbar.vue').default);
+// Vue.component('navbar-component', require('./components/navbar.vue').default);
 Vue.component('sidebar-component', require('./components/sidebar.vue').default);
 
 // Vue.component('Home', Home);
