@@ -10,23 +10,12 @@ window.Vue = require('vue').default;
 
 import vuetify from './vuetify';
 
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('header-component', require('./components/Header.vue').default);
 // Vue.component('navbar-component', require('./components/navbar.vue').default);
 Vue.component('sidebar-component', require('./components/sidebar.vue').default);
-Vue.component('home-component', require('./components/home.vue').default);
+Vue.component('dashboard-component', require('./components/dashboard.vue').default);
+Vue.component('dt-component', require('./components/dt.vue').default);
 
 //Vue.component('home', home);
 //Vue.component('Memek', Memek);

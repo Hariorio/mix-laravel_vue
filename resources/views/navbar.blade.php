@@ -205,16 +205,25 @@
             </ul>
 
         </nav>
+        <div class="container">
+            @yield('content')
+        </div>
+        {{-- @yield('content') --}}
+        {{-- <div id="app">
+            <v-app>
+         <dt-component></dt-component> 
+            </v-app>
+        </div> 
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
 
-        <div id="app">
+        {{-- <div id="app">
             <v-app>
-         <home-component></home-component> 
+         <dashboard-component></dashboard-component> 
             </v-app>
-        </div>
-        {{-- <div class="container-fluid">
+        </div> --}}
+         {{-- <div class="container-fluid">
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">

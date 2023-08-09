@@ -15,4 +15,10 @@ class HomeController extends Controller
      {
         return view('home');
      }
+
+     public function dt(Request $request) 
+     {
+        return view('dt');
+     }
+     
 }
