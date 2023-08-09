@@ -6380,32 +6380,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vuetify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vuetify */ "./resources/js/vuetify.js");
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
 
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-// Vue.component('header-component', require('./components/Header.vue').default);
-// Vue.component('navbar-component', require('./components/navbar.vue').default);
 Vue.component('sidebar-component', (__webpack_require__(/*! ./components/sidebar.vue */ "./resources/js/components/sidebar.vue")["default"]));
 Vue.component('dashboard-component', (__webpack_require__(/*! ./components/dashboard.vue */ "./resources/js/components/dashboard.vue")["default"]));
 Vue.component('dt-component', (__webpack_require__(/*! ./components/dt.vue */ "./resources/js/components/dt.vue")["default"]));
-
-//Vue.component('home', home);
-//Vue.component('Memek', Memek);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 var app = new Vue({
   el: '#app',
   vuetify: _vuetify__WEBPACK_IMPORTED_MODULE_0__["default"]
