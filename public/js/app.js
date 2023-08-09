@@ -5302,10 +5302,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5313,10 +5313,213 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5342,18 +5545,157 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      cokModel: ''
-    };
+    var _ref;
+    return _ref = {
+      snackbar: {
+        color: null,
+        icon: null,
+        mode: null,
+        position: "top",
+        text: null,
+        timeout: 7500,
+        title: null,
+        visible: false
+      },
+      breadcumbs: [{
+        text: 'Sunrise Steel',
+        disabled: false,
+        href: '/admin/sr'
+      }, {
+        text: 'Sales Activity',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }, {
+        text: 'Activity Visit Report',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }],
+      loading: false,
+      offices: [],
+      office: '',
+      saleses: [],
+      sales: '',
+      date_from: '',
+      modal: false,
+      date_to: '',
+      modal_to: false,
+      display: 'none',
+      // purchases: [],
+      headers: [{
+        text: 'Dessert (100g serving)',
+        align: 'start',
+        sortable: false,
+        value: 'name'
+      }, {
+        text: 'Calories',
+        value: 'calories'
+      }, {
+        text: 'Fat (g)',
+        value: 'fat'
+      }, {
+        text: 'Carbs (g)',
+        value: 'carbs'
+      }, {
+        text: 'Protein (g)',
+        value: 'protein'
+      }, {
+        text: 'Iron (%)',
+        value: 'iron'
+      }],
+      desserts: [{
+        name: 'Frozen Yogurt',
+        calories: 159,
+        fat: 6.0,
+        carbs: 24,
+        protein: 4.0,
+        iron: 1
+      }, {
+        name: 'Ice cream sandwich',
+        calories: 237,
+        fat: 9.0,
+        carbs: 37,
+        protein: 4.3,
+        iron: 1
+      }, {
+        name: 'Eclair',
+        calories: 262,
+        fat: 16.0,
+        carbs: 23,
+        protein: 6.0,
+        iron: 7
+      }, {
+        name: 'Cupcake',
+        calories: 305,
+        fat: 3.7,
+        carbs: 67,
+        protein: 4.3,
+        iron: 8
+      }, {
+        name: 'Gingerbread',
+        calories: 356,
+        fat: 16.0,
+        carbs: 49,
+        protein: 3.9,
+        iron: 16
+      }, {
+        name: 'Jelly bean',
+        calories: 375,
+        fat: 0.0,
+        carbs: 94,
+        protein: 0.0,
+        iron: 0
+      }, {
+        name: 'Lollipop',
+        calories: 392,
+        fat: 0.2,
+        carbs: 98,
+        protein: 0,
+        iron: 2
+      }, {
+        name: 'Honeycomb',
+        calories: 408,
+        fat: 3.2,
+        carbs: 87,
+        protein: 6.5,
+        iron: 45
+      }, {
+        name: 'Donut',
+        calories: 452,
+        fat: 25.0,
+        carbs: 51,
+        protein: 4.9,
+        iron: 22
+      }, {
+        name: 'KitKat',
+        calories: 518,
+        fat: 26.0,
+        carbs: 65,
+        protein: 7,
+        iron: 6
+      }],
+      headerexcel: {
+        'Id Cust': 'customerid',
+        'Customer': 'namacustomer',
+        'Sales': 'nama',
+        'Address': 'alamat',
+        'City': 'city',
+        'Date': 'tr_date',
+        'Remark': 'remark',
+        'Activity': 'activity'
+      },
+      totalItems: 10,
+      options: {},
+      loading2: false
+    }, _defineProperty(_ref, "loading", false), _defineProperty(_ref, "search_detail", ''), _defineProperty(_ref, "po_items", []), _defineProperty(_ref, "po_item", ''), _defineProperty(_ref, "option_po_items", {}), _defineProperty(_ref, "loading3", false), _defineProperty(_ref, "loading4", false), _defineProperty(_ref, "loading5", false), _defineProperty(_ref, "totalItem_po_items", 10), _defineProperty(_ref, "dialog", false), _defineProperty(_ref, "user_approve1", ''), _defineProperty(_ref, "user_approve2", ''), _defineProperty(_ref, "pagination", 1), _defineProperty(_ref, "mymap", ''), _defineProperty(_ref, "data_var", {
+      entity_id: 'SR',
+      appl_id: 'WEBSR'
+    }), _defineProperty(_ref, "salesid", ''), _defineProperty(_ref, "disabled_sales", false), _defineProperty(_ref, "imageUrl", ''), _ref;
   },
   mounted: function mounted() {
-    var _this = this;
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            _this.initialize();
-          case 1:
           case "end":
             return _context.stop();
         }
@@ -5361,30 +5703,63 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }))();
   },
   methods: {
-    initialize: function initialize() {
-      this.cokModel = 'i love nundu';
+    startDownload: function startDownload() {
+      this.loading = true;
+      this.disabledExport = true;
     },
-    getMemberListData: function getMemberListData() {
-      var _this2 = this;
+    finishDownload: function finishDownload() {
+      this.loading = false;
+      this.disabledExport = false;
+    },
+    close: function close() {
+      this.dialog = false;
+    },
+    exportExcel: function exportExcel() {
+      var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var start_date, end_date, response;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
-              _context2.next = 2;
-              return axios.get("/testGetData", {
+              start_date = _this.date_from ? new Date(_this.date_from).toISOString().substr(0, 10).replace(/-/g, "") : '';
+              end_date = _this.date_to ? new Date(_this.date_to).toISOString().substr(0, 10).replace(/-/g, "") : '';
+              if (!(_this.date_from === '' || _this.date_from === null)) {
+                _context2.next = 7;
+                break;
+              }
+              _this.snackbar = {
+                color: "error",
+                icon: "mdi-alert-circle",
+                mode: "multi-line",
+                position: "top",
+                timeout: 7500,
+                title: "Error",
+                text: "Please fill period",
+                visible: true
+              };
+              return _context2.abrupt("return", false);
+            case 7:
+              if (_this.start_date) {
+                _this.start_date = new Date(_this.start_date).toISOString().substr(0, 10).replace(/-/g, "");
+              } else {
+                _this.start_date = '';
+              }
+              if (_this.end_date) {
+                _this.end_date = new Date(_this.end_date).toISOString().substr(0, 10).replace(/-/g, "");
+              } else {
+                _this.end_date = '';
+              }
+              _context2.next = 11;
+              return axios.get("".concat(process.env.VUE_APP_URL, "/api/sr/sales_activity/ExportExcel?search=").concat(_this.$store.state.text, "&txtOffID=").concat(_this.office ? _this.office : '', "&salesid=").concat(_this.sales ? _this.sales : '', "&start_date=").concat(start_date ? start_date : "", "&end_date=").concat(end_date ? end_date : ""), {
                 headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json',
-                  'Access-Control-Allow-Origin': '*',
-                  'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                  Authorization: "Bearer ".concat(_this.$store.getters.isTokenUser)
                 }
-              }).then(function (res) {
-                _this2.userLists = res.data.result;
-                // console.log(res.data.result);
-              })["catch"](function (err) {
-                console.log(err);
               });
-            case 2:
+            case 11:
+              response = _context2.sent;
+              console.log(response.data);
+              return _context2.abrupt("return", response.data.data);
+            case 14:
             case "end":
               return _context2.stop();
           }
@@ -5396,10 +5771,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5407,10 +5782,217 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5432,18 +6014,157 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      cokModel: ''
-    };
+    var _ref;
+    return _ref = {
+      snackbar: {
+        color: null,
+        icon: null,
+        mode: null,
+        position: "top",
+        text: null,
+        timeout: 7500,
+        title: null,
+        visible: false
+      },
+      breadcumbs: [{
+        text: 'Sunrise Steel',
+        disabled: false,
+        href: '/admin/sr'
+      }, {
+        text: 'Sales Activity',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }, {
+        text: 'Activity Visit Report',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }],
+      loading: false,
+      offices: [],
+      office: '',
+      saleses: [],
+      sales: '',
+      date_from: '',
+      modal: false,
+      date_to: '',
+      modal_to: false,
+      display: 'none',
+      // purchases: [],
+      headers: [{
+        text: 'Dessert (100g serving)',
+        align: 'start',
+        sortable: false,
+        value: 'name'
+      }, {
+        text: 'Calories',
+        value: 'calories'
+      }, {
+        text: 'Fat (g)',
+        value: 'fat'
+      }, {
+        text: 'Carbs (g)',
+        value: 'carbs'
+      }, {
+        text: 'Protein (g)',
+        value: 'protein'
+      }, {
+        text: 'Iron (%)',
+        value: 'iron'
+      }],
+      desserts: [{
+        name: 'Frozen Yogurt',
+        calories: 159,
+        fat: 6.0,
+        carbs: 24,
+        protein: 4.0,
+        iron: 1
+      }, {
+        name: 'Ice cream sandwich',
+        calories: 237,
+        fat: 9.0,
+        carbs: 37,
+        protein: 4.3,
+        iron: 1
+      }, {
+        name: 'Eclair',
+        calories: 262,
+        fat: 16.0,
+        carbs: 23,
+        protein: 6.0,
+        iron: 7
+      }, {
+        name: 'Cupcake',
+        calories: 305,
+        fat: 3.7,
+        carbs: 67,
+        protein: 4.3,
+        iron: 8
+      }, {
+        name: 'Gingerbread',
+        calories: 356,
+        fat: 16.0,
+        carbs: 49,
+        protein: 3.9,
+        iron: 16
+      }, {
+        name: 'Jelly bean',
+        calories: 375,
+        fat: 0.0,
+        carbs: 94,
+        protein: 0.0,
+        iron: 0
+      }, {
+        name: 'Lollipop',
+        calories: 392,
+        fat: 0.2,
+        carbs: 98,
+        protein: 0,
+        iron: 2
+      }, {
+        name: 'Honeycomb',
+        calories: 408,
+        fat: 3.2,
+        carbs: 87,
+        protein: 6.5,
+        iron: 45
+      }, {
+        name: 'Donut',
+        calories: 452,
+        fat: 25.0,
+        carbs: 51,
+        protein: 4.9,
+        iron: 22
+      }, {
+        name: 'KitKat',
+        calories: 518,
+        fat: 26.0,
+        carbs: 65,
+        protein: 7,
+        iron: 6
+      }],
+      headerexcel: {
+        'Id Cust': 'customerid',
+        'Customer': 'namacustomer',
+        'Sales': 'nama',
+        'Address': 'alamat',
+        'City': 'city',
+        'Date': 'tr_date',
+        'Remark': 'remark',
+        'Activity': 'activity'
+      },
+      totalItems: 10,
+      options: {},
+      loading2: false
+    }, _defineProperty(_ref, "loading", false), _defineProperty(_ref, "search_detail", ''), _defineProperty(_ref, "po_items", []), _defineProperty(_ref, "po_item", ''), _defineProperty(_ref, "option_po_items", {}), _defineProperty(_ref, "loading3", false), _defineProperty(_ref, "loading4", false), _defineProperty(_ref, "loading5", false), _defineProperty(_ref, "totalItem_po_items", 10), _defineProperty(_ref, "dialog", false), _defineProperty(_ref, "user_approve1", ''), _defineProperty(_ref, "user_approve2", ''), _defineProperty(_ref, "pagination", 1), _defineProperty(_ref, "mymap", ''), _defineProperty(_ref, "data_var", {
+      entity_id: 'SR',
+      appl_id: 'WEBSR'
+    }), _defineProperty(_ref, "salesid", ''), _defineProperty(_ref, "disabled_sales", false), _defineProperty(_ref, "imageUrl", ''), _ref;
   },
   mounted: function mounted() {
-    var _this = this;
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            _this.initialize();
-          case 1:
           case "end":
             return _context.stop();
         }
@@ -5451,30 +6172,63 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }))();
   },
   methods: {
-    initialize: function initialize() {
-      this.cokModel = 'i love nundu';
+    startDownload: function startDownload() {
+      this.loading = true;
+      this.disabledExport = true;
     },
-    getMemberListData: function getMemberListData() {
-      var _this2 = this;
+    finishDownload: function finishDownload() {
+      this.loading = false;
+      this.disabledExport = false;
+    },
+    close: function close() {
+      this.dialog = false;
+    },
+    exportExcel: function exportExcel() {
+      var _this = this;
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var start_date, end_date, response;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
-              _context2.next = 2;
-              return axios.get("/testGetData", {
+              start_date = _this.date_from ? new Date(_this.date_from).toISOString().substr(0, 10).replace(/-/g, "") : '';
+              end_date = _this.date_to ? new Date(_this.date_to).toISOString().substr(0, 10).replace(/-/g, "") : '';
+              if (!(_this.date_from === '' || _this.date_from === null)) {
+                _context2.next = 7;
+                break;
+              }
+              _this.snackbar = {
+                color: "error",
+                icon: "mdi-alert-circle",
+                mode: "multi-line",
+                position: "top",
+                timeout: 7500,
+                title: "Error",
+                text: "Please fill period",
+                visible: true
+              };
+              return _context2.abrupt("return", false);
+            case 7:
+              if (_this.start_date) {
+                _this.start_date = new Date(_this.start_date).toISOString().substr(0, 10).replace(/-/g, "");
+              } else {
+                _this.start_date = '';
+              }
+              if (_this.end_date) {
+                _this.end_date = new Date(_this.end_date).toISOString().substr(0, 10).replace(/-/g, "");
+              } else {
+                _this.end_date = '';
+              }
+              _context2.next = 11;
+              return axios.get("".concat(process.env.VUE_APP_URL, "/api/sr/sales_activity/ExportExcel?search=").concat(_this.$store.state.text, "&txtOffID=").concat(_this.office ? _this.office : '', "&salesid=").concat(_this.sales ? _this.sales : '', "&start_date=").concat(start_date ? start_date : "", "&end_date=").concat(end_date ? end_date : ""), {
                 headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json',
-                  'Access-Control-Allow-Origin': '*',
-                  'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                  Authorization: "Bearer ".concat(_this.$store.getters.isTokenUser)
                 }
-              }).then(function (res) {
-                _this2.userLists = res.data.result;
-                // console.log(res.data.result);
-              })["catch"](function (err) {
-                console.log(err);
               });
-            case 2:
+            case 11:
+              response = _context2.sent;
+              console.log(response.data);
+              return _context2.abrupt("return", response.data.data);
+            case 14:
             case "end":
               return _context2.stop();
           }
@@ -5626,45 +6380,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vuetify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vuetify */ "./resources/js/vuetify.js");
-/* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue");
-/* harmony import */ var _components_Memek_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Memek.vue */ "./resources/js/components/Memek.vue");
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
 
-
-
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-// Vue.component('header-component', require('./components/Header.vue').default);
-// Vue.component('navbar-component', require('./components/navbar.vue').default);
 Vue.component('sidebar-component', (__webpack_require__(/*! ./components/sidebar.vue */ "./resources/js/components/sidebar.vue")["default"]));
-
-// Vue.component('Home', Home);
-// Vue.component('Memek', Memek);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
+Vue.component('dashboard-component', (__webpack_require__(/*! ./components/dashboard.vue */ "./resources/js/components/dashboard.vue")["default"]));
+Vue.component('dt-component', (__webpack_require__(/*! ./components/dt.vue */ "./resources/js/components/dt.vue")["default"]));
 var app = new Vue({
   el: '#app',
   vuetify: _vuetify__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -28803,10 +29524,10 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Home.vue":
-/*!******************************************!*\
-  !*** ./resources/js/components/Home.vue ***!
-  \******************************************/
+/***/ "./resources/js/components/dashboard.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/dashboard.vue ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28814,8 +29535,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=f2b6376c& */ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&");
-/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/components/Home.vue?vue&type=script&lang=js&");
+/* harmony import */ var _dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard.vue?vue&type=template&id=57220a4e& */ "./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e&");
+/* harmony import */ var _dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/dashboard.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -28825,9 +29546,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -28837,15 +29558,15 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/Home.vue"
+component.options.__file = "resources/js/components/dashboard.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/Memek.vue":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Memek.vue ***!
-  \*******************************************/
+/***/ "./resources/js/components/dt.vue":
+/*!****************************************!*\
+  !*** ./resources/js/components/dt.vue ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28853,8 +29574,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Memek.vue?vue&type=template&id=27bcf460& */ "./resources/js/components/Memek.vue?vue&type=template&id=27bcf460&");
-/* harmony import */ var _Memek_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Memek.vue?vue&type=script&lang=js& */ "./resources/js/components/Memek.vue?vue&type=script&lang=js&");
+/* harmony import */ var _dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dt.vue?vue&type=template&id=71366fca& */ "./resources/js/components/dt.vue?vue&type=template&id=71366fca&");
+/* harmony import */ var _dt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dt.vue?vue&type=script&lang=js& */ "./resources/js/components/dt.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -28864,9 +29585,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Memek_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _dt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__.render,
+  _dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -28876,7 +29597,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/Memek.vue"
+component.options.__file = "resources/js/components/dt.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -28920,10 +29641,10 @@ component.options.__file = "resources/js/components/sidebar.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/Home.vue?vue&type=script&lang=js&":
-/*!*******************************************************************!*\
-  !*** ./resources/js/components/Home.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************/
+/***/ "./resources/js/components/dashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/dashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28931,15 +29652,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/Memek.vue?vue&type=script&lang=js&":
-/*!********************************************************************!*\
-  !*** ./resources/js/components/Memek.vue?vue&type=script&lang=js& ***!
-  \********************************************************************/
+/***/ "./resources/js/components/dt.vue?vue&type=script&lang=js&":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/dt.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28947,8 +29668,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Memek_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Memek.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Memek_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dt.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -28968,36 +29689,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/Home.vue?vue&type=template&id=f2b6376c& ***!
-  \*************************************************************************/
+/***/ "./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e& ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_f2b6376c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=f2b6376c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dashboard_vue_vue_type_template_id_57220a4e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dashboard.vue?vue&type=template&id=57220a4e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e&");
 
 
 /***/ }),
 
-/***/ "./resources/js/components/Memek.vue?vue&type=template&id=27bcf460&":
-/*!**************************************************************************!*\
-  !*** ./resources/js/components/Memek.vue?vue&type=template&id=27bcf460& ***!
-  \**************************************************************************/
+/***/ "./resources/js/components/dt.vue?vue&type=template&id=71366fca&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/dt.vue?vue&type=template&id=71366fca& ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Memek_vue_vue_type_template_id_27bcf460___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Memek.vue?vue&type=template&id=27bcf460& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=template&id=27bcf460&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_vue_vue_type_template_id_71366fca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dt.vue?vue&type=template&id=71366fca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=template&id=71366fca&");
 
 
 /***/ }),
@@ -29019,10 +29740,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dashboard.vue?vue&type=template&id=57220a4e& ***!
+  \*********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -29035,24 +29756,814 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [_vm._v("Dashboard")]),
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c("v-breadcrumbs", {
+                attrs: { items: _vm.breadcumbs },
+                scopedSlots: _vm._u([
+                  {
+                    key: "item",
+                    fn: function (ref) {
+                      var item = ref.item
+                      return [
+                        _c(
+                          "v-breadcrumbs-item",
+                          {
+                            staticClass: "text-subtitle-2 crumb-item",
+                            attrs: {
+                              to: item.href,
+                              disabled: item.disabled,
+                              exact: "",
+                            },
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(item.text) +
+                                "\n                "
+                            ),
+                          ]
+                        ),
+                      ]
+                    },
+                  },
+                ]),
+              }),
+            ],
+            1
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._v(
-              "\n\n                    You are logged in!\n\n                    " +
-                _vm._s(_vm.cokModel) +
-                "\n\n                    "
-            ),
-            _c("a", { attrs: { href: "/memek" } }, [_vm._v("go to memek")]),
-          ]),
-        ]),
-      ]),
-    ]),
-  ])
+          _c(
+            "v-row",
+            [
+              _c(
+                "v-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
+                    "v-card",
+                    [
+                      _c("v-progress-linear", {
+                        attrs: {
+                          active: _vm.loading,
+                          indeterminate: _vm.loading,
+                          absolute: "",
+                          bottom: "",
+                          color: "deep-purple accent-4",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "2",
+                                  },
+                                },
+                                [
+                                  _c("v-autocomplete", {
+                                    staticClass: "ma-0 pa-0 border-12",
+                                    attrs: {
+                                      solo: "",
+                                      clearable: "",
+                                      items: _vm.saleses,
+                                      "item-value": "salesman_id",
+                                      "item-text": "salesman_name",
+                                      label: "Sales Person",
+                                      "hide-details": "true",
+                                      disabled: _vm.disabled_sales,
+                                    },
+                                    model: {
+                                      value: _vm.sales,
+                                      callback: function ($$v) {
+                                        _vm.sales = $$v
+                                      },
+                                      expression: "sales",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-progress-linear", {
+                                    attrs: {
+                                      active: _vm.loading2,
+                                      indeterminate: _vm.loading2,
+                                      absolute: "",
+                                      bottom: "",
+                                      color: "deep-purple accent-4",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "3",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-menu",
+                                    {
+                                      ref: "dialog_from",
+                                      attrs: {
+                                        "close-on-content-click": false,
+                                        transition: "scale-transition",
+                                        "offset-y": "",
+                                        "max-width": "290px",
+                                        "min-width": "auto",
+                                      },
+                                      scopedSlots: _vm._u([
+                                        {
+                                          key: "activator",
+                                          fn: function (ref) {
+                                            var on = ref.on
+                                            var attrs = ref.attrs
+                                            return [
+                                              _c(
+                                                "v-text-field",
+                                                _vm._g(
+                                                  _vm._b(
+                                                    {
+                                                      staticClass:
+                                                        "ma-0 pa-0 border-12",
+                                                      attrs: {
+                                                        solo: "",
+                                                        label: "Date from",
+                                                        "persistent-hint": "",
+                                                        "append-icon":
+                                                          "mdi-calendar",
+                                                        "hide-details": "true",
+                                                      },
+                                                      model: {
+                                                        value: _vm.date_from,
+                                                        callback: function (
+                                                          $$v
+                                                        ) {
+                                                          _vm.date_from = $$v
+                                                        },
+                                                        expression: "date_from",
+                                                      },
+                                                    },
+                                                    "v-text-field",
+                                                    attrs,
+                                                    false
+                                                  ),
+                                                  on
+                                                )
+                                              ),
+                                            ]
+                                          },
+                                        },
+                                      ]),
+                                      model: {
+                                        value: _vm.modal,
+                                        callback: function ($$v) {
+                                          _vm.modal = $$v
+                                        },
+                                        expression: "modal",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c("v-date-picker", {
+                                        attrs: { "no-title": "" },
+                                        on: {
+                                          input: function ($event) {
+                                            ;[(_vm.modal = false)]
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.date_from,
+                                          callback: function ($$v) {
+                                            _vm.date_from = $$v
+                                          },
+                                          expression: "date_from",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "3",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-menu",
+                                    {
+                                      ref: "dialog",
+                                      attrs: {
+                                        "close-on-content-click": false,
+                                        transition: "scale-transition",
+                                        "offset-y": "",
+                                        "max-width": "290px",
+                                        "min-width": "auto",
+                                      },
+                                      scopedSlots: _vm._u([
+                                        {
+                                          key: "activator",
+                                          fn: function (ref) {
+                                            var on = ref.on
+                                            var attrs = ref.attrs
+                                            return [
+                                              _c(
+                                                "v-text-field",
+                                                _vm._g(
+                                                  _vm._b(
+                                                    {
+                                                      staticClass:
+                                                        "ma-0 pa-0 border-12",
+                                                      attrs: {
+                                                        solo: "",
+                                                        label: "Date To",
+                                                        "persistent-hint": "",
+                                                        "append-icon":
+                                                          "mdi-calendar",
+                                                        "hide-details": "true",
+                                                      },
+                                                      model: {
+                                                        value: _vm.date_to,
+                                                        callback: function (
+                                                          $$v
+                                                        ) {
+                                                          _vm.date_to = $$v
+                                                        },
+                                                        expression: "date_to",
+                                                      },
+                                                    },
+                                                    "v-text-field",
+                                                    attrs,
+                                                    false
+                                                  ),
+                                                  on
+                                                )
+                                              ),
+                                            ]
+                                          },
+                                        },
+                                      ]),
+                                      model: {
+                                        value: _vm.modal_to,
+                                        callback: function ($$v) {
+                                          _vm.modal_to = $$v
+                                        },
+                                        expression: "modal_to",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c("v-date-picker", {
+                                        attrs: { "no-title": "" },
+                                        on: {
+                                          input: function ($event) {
+                                            ;[(_vm.modal_to = false)]
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.date_to,
+                                          callback: function ($$v) {
+                                            _vm.date_to = $$v
+                                          },
+                                          expression: "date_to",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "3",
+                                    md: "2",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "mt-1 border-12",
+                                      attrs: {
+                                        color: "info",
+                                        elevation: "2",
+                                        large: "",
+                                      },
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.search()
+                                        },
+                                      },
+                                    },
+                                    [_vm._v("Search")]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                {
+                  staticStyle: { "padding-bottom": "100px" },
+                  attrs: { cols: "12" },
+                },
+                [
+                  _c(
+                    "v-card",
+                    { attrs: { outlined: "" } },
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    [
+                                      _vm._v(
+                                        "Result\n                                "
+                                      ),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "text-right",
+                                          attrs: {
+                                            cols: "12",
+                                            xs: "12",
+                                            sm: "12",
+                                            md: "2",
+                                          },
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              staticClass:
+                                                "mb-4 mr-2 text-white",
+                                              attrs: {
+                                                color: "#0D47A1",
+                                                elevation: "2",
+                                                medium: "",
+                                              },
+                                            },
+                                            [
+                                              _c(
+                                                "download-excel",
+                                                {
+                                                  staticClass: "text",
+                                                  attrs: {
+                                                    fetch: _vm.exportExcel,
+                                                    fields: _vm.headerexcel,
+                                                    "before-generate":
+                                                      _vm.startDownload,
+                                                    "before-finish":
+                                                      _vm.finishDownload,
+                                                  },
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                    Export Excel\n                                                    "
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-icon", [
+                                                _vm._v(
+                                                  "mdi-arrow-down-bold-box"
+                                                ),
+                                              ]),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-data-table", {
+                                    staticClass: "elevation-1",
+                                    attrs: {
+                                      "fixed-header": "",
+                                      height: "490",
+                                      headers: _vm.headers,
+                                      items: _vm.desserts,
+                                      options: _vm.options,
+                                      loading: _vm.loading,
+                                      "loading-text":
+                                        "Please wait, retrieving data",
+                                      "server-items-length": _vm.totalItems,
+                                      page: _vm.pagination,
+                                      "page-count": "10",
+                                    },
+                                    on: {
+                                      "update:options": function ($event) {
+                                        _vm.options = $event
+                                      },
+                                      "update:page": function ($event) {
+                                        _vm.pagination = $event
+                                      },
+                                    },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "item.activity",
+                                          fn: function (ref) {
+                                            var item = ref.item
+                                            return [
+                                              _c("div", {
+                                                domProps: {
+                                                  innerHTML: _vm._s(
+                                                    item.activity
+                                                  ),
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                        },
+                                        {
+                                          key: "item.actions",
+                                          fn: function (ref) {
+                                            var item = ref.item
+                                            return [
+                                              _c(
+                                                "td",
+                                                [
+                                                  _c(
+                                                    "v-tooltip",
+                                                    {
+                                                      attrs: { top: "" },
+                                                      scopedSlots: _vm._u(
+                                                        [
+                                                          {
+                                                            key: "activator",
+                                                            fn: function (ref) {
+                                                              var on = ref.on
+                                                              return [
+                                                                _c(
+                                                                  "v-icon",
+                                                                  _vm._g(
+                                                                    {
+                                                                      staticClass:
+                                                                        "mr-2",
+                                                                      attrs: {
+                                                                        small:
+                                                                          "",
+                                                                      },
+                                                                      on: {
+                                                                        click:
+                                                                          function (
+                                                                            $event
+                                                                          ) {
+                                                                            return _vm.showItem(
+                                                                              item
+                                                                            )
+                                                                          },
+                                                                      },
+                                                                    },
+                                                                    on
+                                                                  ),
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                                                    mdi-eye\n                                                "
+                                                                    ),
+                                                                  ]
+                                                                ),
+                                                              ]
+                                                            },
+                                                          },
+                                                        ],
+                                                        null,
+                                                        true
+                                                      ),
+                                                    },
+                                                    [
+                                                      _vm._v(" "),
+                                                      _c("span", [
+                                                        _vm._v("View Map"),
+                                                      ]),
+                                                    ]
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              item.img_url != "" ||
+                                              item.img_url != null
+                                                ? _c(
+                                                    "td",
+                                                    [
+                                                      _c(
+                                                        "v-tooltip",
+                                                        {
+                                                          attrs: { top: "" },
+                                                          scopedSlots: _vm._u(
+                                                            [
+                                                              {
+                                                                key: "activator",
+                                                                fn: function (
+                                                                  ref
+                                                                ) {
+                                                                  var on =
+                                                                    ref.on
+                                                                  return [
+                                                                    _c(
+                                                                      "v-chip",
+                                                                      _vm._g(
+                                                                        {
+                                                                          staticClass:
+                                                                            "ma-1",
+                                                                          attrs:
+                                                                            {
+                                                                              color:
+                                                                                "#283593",
+                                                                              elevation:
+                                                                                "2",
+                                                                              dense:
+                                                                                "",
+                                                                              small:
+                                                                                "",
+                                                                              rounded:
+                                                                                "",
+                                                                              dark: "",
+                                                                            },
+                                                                          on: {
+                                                                            click:
+                                                                              function (
+                                                                                $event
+                                                                              ) {
+                                                                                return _vm.showImageModal(
+                                                                                  item.img_url
+                                                                                )
+                                                                              },
+                                                                          },
+                                                                        },
+                                                                        on
+                                                                      ),
+                                                                      [
+                                                                        _c(
+                                                                          "v-icon",
+                                                                          {
+                                                                            attrs:
+                                                                              {
+                                                                                dark: "",
+                                                                              },
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "mdi-file-image"
+                                                                            ),
+                                                                          ]
+                                                                        ),
+                                                                      ],
+                                                                      1
+                                                                    ),
+                                                                  ]
+                                                                },
+                                                              },
+                                                            ],
+                                                            null,
+                                                            true
+                                                          ),
+                                                        },
+                                                        [
+                                                          _vm._v(" "),
+                                                          _c("span", [
+                                                            _vm._v(
+                                                              "Show Image"
+                                                            ),
+                                                          ]),
+                                                        ]
+                                                      ),
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
+                                            ]
+                                          },
+                                        },
+                                      ],
+                                      null,
+                                      true
+                                    ),
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-dialog",
+                    {
+                      attrs: { "max-width": "1000px" },
+                      model: {
+                        value: _vm.dialog,
+                        callback: function ($$v) {
+                          _vm.dialog = $$v
+                        },
+                        expression: "dialog",
+                      },
+                    },
+                    [
+                      _c(
+                        "v-card",
+                        [
+                          _c("v-card-title", [_vm._v("Detail Location")]),
+                          _vm._v(" "),
+                          _c(
+                            "v-card-text",
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { fluid: "" } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    [
+                                      _c("v-col", { attrs: { cols: "12" } }, [
+                                        _c("div", {
+                                          staticStyle: {
+                                            height: "432px",
+                                            width: "100%",
+                                            border: "1px solid grey",
+                                          },
+                                          attrs: { id: "map_canvas" },
+                                        }),
+                                      ]),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-card-actions",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { color: "blue darken-1", text: "" },
+                                  on: { click: _vm.close },
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-snackbar",
+                    {
+                      attrs: {
+                        color: _vm.snackbar.color,
+                        "multi-line": _vm.snackbar.mode === "multi-line",
+                        timeout: _vm.snackbar.timeout,
+                        top: _vm.snackbar.position === "top",
+                      },
+                      model: {
+                        value: _vm.snackbar.visible,
+                        callback: function ($$v) {
+                          _vm.$set(_vm.snackbar, "visible", $$v)
+                        },
+                        expression: "snackbar.visible",
+                      },
+                    },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { "align-center": "", "pr-4": "" } },
+                        [
+                          _c(
+                            "v-icon",
+                            {
+                              staticClass: "pr-3",
+                              attrs: { dark: "", large: "" },
+                            },
+                            [_vm._v(_vm._s(_vm.snackbar.icon))]
+                          ),
+                          _vm._v(" "),
+                          _c("v-layout", { attrs: { column: "" } }, [
+                            _c("div", [
+                              _c("strong", [
+                                _vm._v(_vm._s(_vm.snackbar.title)),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [_vm._v(_vm._s(_vm.snackbar.text))]),
+                          ]),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm.snackbar.timeout === 0
+                        ? _c(
+                            "v-btn",
+                            {
+                              attrs: { icon: "" },
+                              on: {
+                                click: function ($event) {
+                                  _vm.snackbar.visible = false
+                                },
+                              },
+                            },
+                            [_c("v-icon", [_vm._v("clear")])],
+                            1
+                          )
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -29061,10 +30572,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=template&id=27bcf460&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Memek.vue?vue&type=template&id=27bcf460& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=template&id=71366fca&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/dt.vue?vue&type=template&id=71366fca& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -29077,30 +30588,816 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("Dashboard")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n\n                    iki halaman memek\n\n                "
+  return _c(
+    "v-container",
+    [
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c("v-breadcrumbs", {
+                attrs: { items: _vm.breadcumbs },
+                scopedSlots: _vm._u([
+                  {
+                    key: "item",
+                    fn: function (ref) {
+                      var item = ref.item
+                      return [
+                        _c(
+                          "v-breadcrumbs-item",
+                          {
+                            staticClass: "text-subtitle-2 crumb-item",
+                            attrs: {
+                              to: item.href,
+                              disabled: item.disabled,
+                              exact: "",
+                            },
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(item.text) +
+                                "\n                "
+                            ),
+                          ]
+                        ),
+                      ]
+                    },
+                  },
+                ]),
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-row",
+            [
+              _c(
+                "v-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
+                    "v-card",
+                    [
+                      _c("v-progress-linear", {
+                        attrs: {
+                          active: _vm.loading,
+                          indeterminate: _vm.loading,
+                          absolute: "",
+                          bottom: "",
+                          color: "deep-purple accent-4",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "2",
+                                  },
+                                },
+                                [
+                                  _c("v-autocomplete", {
+                                    staticClass: "ma-0 pa-0 border-12",
+                                    attrs: {
+                                      solo: "",
+                                      clearable: "",
+                                      items: _vm.saleses,
+                                      "item-value": "salesman_id",
+                                      "item-text": "salesman_name",
+                                      label: "Sales Person",
+                                      "hide-details": "true",
+                                      disabled: _vm.disabled_sales,
+                                    },
+                                    model: {
+                                      value: _vm.sales,
+                                      callback: function ($$v) {
+                                        _vm.sales = $$v
+                                      },
+                                      expression: "sales",
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-progress-linear", {
+                                    attrs: {
+                                      active: _vm.loading2,
+                                      indeterminate: _vm.loading2,
+                                      absolute: "",
+                                      bottom: "",
+                                      color: "deep-purple accent-4",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "3",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-menu",
+                                    {
+                                      ref: "dialog_from",
+                                      attrs: {
+                                        "close-on-content-click": false,
+                                        transition: "scale-transition",
+                                        "offset-y": "",
+                                        "max-width": "290px",
+                                        "min-width": "auto",
+                                      },
+                                      scopedSlots: _vm._u([
+                                        {
+                                          key: "activator",
+                                          fn: function (ref) {
+                                            var on = ref.on
+                                            var attrs = ref.attrs
+                                            return [
+                                              _c(
+                                                "v-text-field",
+                                                _vm._g(
+                                                  _vm._b(
+                                                    {
+                                                      staticClass:
+                                                        "ma-0 pa-0 border-12",
+                                                      attrs: {
+                                                        solo: "",
+                                                        label: "Date from",
+                                                        "persistent-hint": "",
+                                                        "append-icon":
+                                                          "mdi-calendar",
+                                                        "hide-details": "true",
+                                                      },
+                                                      model: {
+                                                        value: _vm.date_from,
+                                                        callback: function (
+                                                          $$v
+                                                        ) {
+                                                          _vm.date_from = $$v
+                                                        },
+                                                        expression: "date_from",
+                                                      },
+                                                    },
+                                                    "v-text-field",
+                                                    attrs,
+                                                    false
+                                                  ),
+                                                  on
+                                                )
+                                              ),
+                                            ]
+                                          },
+                                        },
+                                      ]),
+                                      model: {
+                                        value: _vm.modal,
+                                        callback: function ($$v) {
+                                          _vm.modal = $$v
+                                        },
+                                        expression: "modal",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c("v-date-picker", {
+                                        attrs: { "no-title": "" },
+                                        on: {
+                                          input: function ($event) {
+                                            ;[(_vm.modal = false)]
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.date_from,
+                                          callback: function ($$v) {
+                                            _vm.date_from = $$v
+                                          },
+                                          expression: "date_from",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "5",
+                                    md: "3",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-menu",
+                                    {
+                                      ref: "dialog",
+                                      attrs: {
+                                        "close-on-content-click": false,
+                                        transition: "scale-transition",
+                                        "offset-y": "",
+                                        "max-width": "290px",
+                                        "min-width": "auto",
+                                      },
+                                      scopedSlots: _vm._u([
+                                        {
+                                          key: "activator",
+                                          fn: function (ref) {
+                                            var on = ref.on
+                                            var attrs = ref.attrs
+                                            return [
+                                              _c(
+                                                "v-text-field",
+                                                _vm._g(
+                                                  _vm._b(
+                                                    {
+                                                      staticClass:
+                                                        "ma-0 pa-0 border-12",
+                                                      attrs: {
+                                                        solo: "",
+                                                        label: "Date To",
+                                                        "persistent-hint": "",
+                                                        "append-icon":
+                                                          "mdi-calendar",
+                                                        "hide-details": "true",
+                                                      },
+                                                      model: {
+                                                        value: _vm.date_to,
+                                                        callback: function (
+                                                          $$v
+                                                        ) {
+                                                          _vm.date_to = $$v
+                                                        },
+                                                        expression: "date_to",
+                                                      },
+                                                    },
+                                                    "v-text-field",
+                                                    attrs,
+                                                    false
+                                                  ),
+                                                  on
+                                                )
+                                              ),
+                                            ]
+                                          },
+                                        },
+                                      ]),
+                                      model: {
+                                        value: _vm.modal_to,
+                                        callback: function ($$v) {
+                                          _vm.modal_to = $$v
+                                        },
+                                        expression: "modal_to",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c("v-date-picker", {
+                                        attrs: { "no-title": "" },
+                                        on: {
+                                          input: function ($event) {
+                                            ;[(_vm.modal_to = false)]
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.date_to,
+                                          callback: function ($$v) {
+                                            _vm.date_to = $$v
+                                          },
+                                          expression: "date_to",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-col",
+                                {
+                                  attrs: {
+                                    cols: "12",
+                                    xs: "12",
+                                    sm: "3",
+                                    md: "2",
+                                  },
+                                },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "mt-1 border-12",
+                                      attrs: {
+                                        color: "info",
+                                        elevation: "2",
+                                        large: "",
+                                      },
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.search()
+                                        },
+                                      },
+                                    },
+                                    [_vm._v("Search")]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
               ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
+              _vm._v(" "),
+              _c(
+                "v-col",
+                {
+                  staticStyle: { "padding-bottom": "100px" },
+                  attrs: { cols: "12" },
+                },
+                [
+                  _c(
+                    "v-card",
+                    { attrs: { outlined: "" } },
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-row",
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    [
+                                      _vm._v(
+                                        "Result\n                                "
+                                      ),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-col",
+                                        {
+                                          staticClass: "text-right",
+                                          attrs: {
+                                            cols: "12",
+                                            xs: "12",
+                                            sm: "12",
+                                            md: "2",
+                                          },
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              staticClass:
+                                                "mb-4 mr-2 text-white",
+                                              attrs: {
+                                                color: "#0D47A1",
+                                                elevation: "2",
+                                                medium: "",
+                                              },
+                                            },
+                                            [
+                                              _c(
+                                                "download-excel",
+                                                {
+                                                  staticClass: "text",
+                                                  attrs: {
+                                                    fetch: _vm.exportExcel,
+                                                    fields: _vm.headerexcel,
+                                                    "before-generate":
+                                                      _vm.startDownload,
+                                                    "before-finish":
+                                                      _vm.finishDownload,
+                                                  },
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                    Export Excel\n                                                    "
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-icon", [
+                                                _vm._v(
+                                                  "mdi-arrow-down-bold-box"
+                                                ),
+                                              ]),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-data-table", {
+                                    staticClass: "elevation-1",
+                                    attrs: {
+                                      "fixed-header": "",
+                                      height: "490",
+                                      headers: _vm.headers,
+                                      items: _vm.desserts,
+                                      options: _vm.options,
+                                      loading: _vm.loading,
+                                      "loading-text":
+                                        "Please wait, retrieving data",
+                                      "server-items-length": _vm.totalItems,
+                                      page: _vm.pagination,
+                                      "page-count": "10",
+                                    },
+                                    on: {
+                                      "update:options": function ($event) {
+                                        _vm.options = $event
+                                      },
+                                      "update:page": function ($event) {
+                                        _vm.pagination = $event
+                                      },
+                                    },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "item.activity",
+                                          fn: function (ref) {
+                                            var item = ref.item
+                                            return [
+                                              _c("div", {
+                                                domProps: {
+                                                  innerHTML: _vm._s(
+                                                    item.activity
+                                                  ),
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                        },
+                                        {
+                                          key: "item.actions",
+                                          fn: function (ref) {
+                                            var item = ref.item
+                                            return [
+                                              _c(
+                                                "td",
+                                                [
+                                                  _c(
+                                                    "v-tooltip",
+                                                    {
+                                                      attrs: { top: "" },
+                                                      scopedSlots: _vm._u(
+                                                        [
+                                                          {
+                                                            key: "activator",
+                                                            fn: function (ref) {
+                                                              var on = ref.on
+                                                              return [
+                                                                _c(
+                                                                  "v-icon",
+                                                                  _vm._g(
+                                                                    {
+                                                                      staticClass:
+                                                                        "mr-2",
+                                                                      attrs: {
+                                                                        small:
+                                                                          "",
+                                                                      },
+                                                                      on: {
+                                                                        click:
+                                                                          function (
+                                                                            $event
+                                                                          ) {
+                                                                            return _vm.showItem(
+                                                                              item
+                                                                            )
+                                                                          },
+                                                                      },
+                                                                    },
+                                                                    on
+                                                                  ),
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                                                    mdi-eye\n                                                "
+                                                                    ),
+                                                                  ]
+                                                                ),
+                                                              ]
+                                                            },
+                                                          },
+                                                        ],
+                                                        null,
+                                                        true
+                                                      ),
+                                                    },
+                                                    [
+                                                      _vm._v(" "),
+                                                      _c("span", [
+                                                        _vm._v("View Map"),
+                                                      ]),
+                                                    ]
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              item.img_url != "" ||
+                                              item.img_url != null
+                                                ? _c(
+                                                    "td",
+                                                    [
+                                                      _c(
+                                                        "v-tooltip",
+                                                        {
+                                                          attrs: { top: "" },
+                                                          scopedSlots: _vm._u(
+                                                            [
+                                                              {
+                                                                key: "activator",
+                                                                fn: function (
+                                                                  ref
+                                                                ) {
+                                                                  var on =
+                                                                    ref.on
+                                                                  return [
+                                                                    _c(
+                                                                      "v-chip",
+                                                                      _vm._g(
+                                                                        {
+                                                                          staticClass:
+                                                                            "ma-1",
+                                                                          attrs:
+                                                                            {
+                                                                              color:
+                                                                                "#283593",
+                                                                              elevation:
+                                                                                "2",
+                                                                              dense:
+                                                                                "",
+                                                                              small:
+                                                                                "",
+                                                                              rounded:
+                                                                                "",
+                                                                              dark: "",
+                                                                            },
+                                                                          on: {
+                                                                            click:
+                                                                              function (
+                                                                                $event
+                                                                              ) {
+                                                                                return _vm.showImageModal(
+                                                                                  item.img_url
+                                                                                )
+                                                                              },
+                                                                          },
+                                                                        },
+                                                                        on
+                                                                      ),
+                                                                      [
+                                                                        _c(
+                                                                          "v-icon",
+                                                                          {
+                                                                            attrs:
+                                                                              {
+                                                                                dark: "",
+                                                                              },
+                                                                          },
+                                                                          [
+                                                                            _vm._v(
+                                                                              "mdi-file-image"
+                                                                            ),
+                                                                          ]
+                                                                        ),
+                                                                      ],
+                                                                      1
+                                                                    ),
+                                                                  ]
+                                                                },
+                                                              },
+                                                            ],
+                                                            null,
+                                                            true
+                                                          ),
+                                                        },
+                                                        [
+                                                          _vm._v(" "),
+                                                          _c("span", [
+                                                            _vm._v(
+                                                              "Show Image"
+                                                            ),
+                                                          ]),
+                                                        ]
+                                                      ),
+                                                    ],
+                                                    1
+                                                  )
+                                                : _vm._e(),
+                                            ]
+                                          },
+                                        },
+                                      ],
+                                      null,
+                                      true
+                                    ),
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-dialog",
+                    {
+                      attrs: { "max-width": "1000px" },
+                      model: {
+                        value: _vm.dialog,
+                        callback: function ($$v) {
+                          _vm.dialog = $$v
+                        },
+                        expression: "dialog",
+                      },
+                    },
+                    [
+                      _c(
+                        "v-card",
+                        [
+                          _c("v-card-title", [_vm._v("Detail Location")]),
+                          _vm._v(" "),
+                          _c(
+                            "v-card-text",
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { fluid: "" } },
+                                [
+                                  _c(
+                                    "v-row",
+                                    [
+                                      _c("v-col", { attrs: { cols: "12" } }, [
+                                        _c("div", {
+                                          staticStyle: {
+                                            height: "432px",
+                                            width: "100%",
+                                            border: "1px solid grey",
+                                          },
+                                          attrs: { id: "map_canvas" },
+                                        }),
+                                      ]),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-card-actions",
+                            [
+                              _c("v-spacer"),
+                              _vm._v(" "),
+                              _c(
+                                "v-btn",
+                                {
+                                  attrs: { color: "blue darken-1", text: "" },
+                                  on: { click: _vm.close },
+                                },
+                                [_vm._v("Cancel")]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-snackbar",
+                    {
+                      attrs: {
+                        color: _vm.snackbar.color,
+                        "multi-line": _vm.snackbar.mode === "multi-line",
+                        timeout: _vm.snackbar.timeout,
+                        top: _vm.snackbar.position === "top",
+                      },
+                      model: {
+                        value: _vm.snackbar.visible,
+                        callback: function ($$v) {
+                          _vm.$set(_vm.snackbar, "visible", $$v)
+                        },
+                        expression: "snackbar.visible",
+                      },
+                    },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { "align-center": "", "pr-4": "" } },
+                        [
+                          _c(
+                            "v-icon",
+                            {
+                              staticClass: "pr-3",
+                              attrs: { dark: "", large: "" },
+                            },
+                            [_vm._v(_vm._s(_vm.snackbar.icon))]
+                          ),
+                          _vm._v(" "),
+                          _c("v-layout", { attrs: { column: "" } }, [
+                            _c("div", [
+                              _c("strong", [
+                                _vm._v(_vm._s(_vm.snackbar.title)),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [_vm._v(_vm._s(_vm.snackbar.text))]),
+                          ]),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm.snackbar.timeout === 0
+                        ? _c(
+                            "v-btn",
+                            {
+                              attrs: { icon: "" },
+                              on: {
+                                click: function ($event) {
+                                  _vm.snackbar.visible = false
+                                },
+                              },
+                            },
+                            [_c("v-icon", [_vm._v("clear")])],
+                            1
+                          )
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 //Route::get('/login', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
+Route::get('/dt', 'HomeController@dt');
 
 
 
