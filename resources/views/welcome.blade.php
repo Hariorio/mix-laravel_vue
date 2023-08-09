@@ -18,11 +18,11 @@
     </head>
     <body>
         <h1>uye</h1>
-        <!-- <div id="app">
+         <div id="app">
             <div class="main-container sidebar-closed sbar-open" id="container">
          <sidebar-component></sidebar-component>
                 
-        </div> -->
+        </div>
     </div>
     </body>
     <script src="assets/js/libs/jquery-3.1.1.min.js"></script>

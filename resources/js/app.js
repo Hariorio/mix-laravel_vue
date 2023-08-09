@@ -9,8 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 
 import vuetify from './vuetify';
-import Home from "./components/Home.vue";
-import Memek from "./components/Memek.vue";
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,9 +26,10 @@ import Memek from "./components/Memek.vue";
 // Vue.component('header-component', require('./components/Header.vue').default);
 // Vue.component('navbar-component', require('./components/navbar.vue').default);
 Vue.component('sidebar-component', require('./components/sidebar.vue').default);
+Vue.component('home-component', require('./components/home.vue').default);
 
-// Vue.component('Home', Home);
-// Vue.component('Memek', Memek);
+//Vue.component('home', home);
+//Vue.component('Memek', Memek);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
