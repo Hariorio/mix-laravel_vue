@@ -30,11 +30,11 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-            @include('sidebar')
+            @include('partials.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-            @include('navbar')
+            @include('partials.navbar')
             
             
         <!-- End of Content Wrapper -->
