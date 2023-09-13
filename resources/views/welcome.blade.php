@@ -40,16 +40,10 @@
                         </div>
                     </div>
 
-                    <div class="row mb-5">
-                        <div class="col d-flex justify-content-center">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                            <label class="form-check-label" for="form2Example31"> Remember me </label>
-                          </div>
-                        </div>
-                    
+                    <div class="text-center row mb-5">
+                            <small class="d-block text-center ml-4">Not Registered ? <a href="/register">Registered Now !</small>
                         <div class="col">
-                          <a href="#!">Forgot password?</a>
+                          <a href="#!"></a>
                         </div>
                       </div>
                     <div class="text-center pt-1 mb-5 pb-1">
