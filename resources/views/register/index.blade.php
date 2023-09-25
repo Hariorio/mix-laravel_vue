@@ -24,7 +24,16 @@
                  <form action="/register" method="POST">
                 @csrf
                     <div class="form-registration mb-2">
-                        <label class="form-label" for="form2Example11"><h6>Devy cinta</h6></label>
+                      <label class="form-label" for="form2Example11">Id</label>
+                      <input id="id" type="id" class="form-control @error('id') is-invalid @enderror" name="id" required>
+                          @error('id')
+                          <div class="invalid-feedback">
+                              {{ $message }}
+                          </div>
+                          @enderror
+                      </div>
+                    <div class="form-registration mb-2">
+                        <label class="form-label" for="form2Example11">Name</label>
                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" required>
                         @error('name')
                         <div class="invalid-feedback">

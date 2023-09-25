@@ -16,6 +16,14 @@
           <div class="card rounded-3 text-black">
             <div class="row g-0">
               <div class="col-lg-6">
+                @if(session()->has('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success')}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                @endif
                 <div class="card-body p-md-5 mx-md-4">
                   <div class="text-left mb-4">
                     <img src="img/Logox.png" alt="logo">
