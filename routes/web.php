@@ -5,11 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::post('/login', 'LoginController@index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'LoginController@index');
+Route::post('/login', 'LoginController@store');
 Route::get('/register', 'RegisterController@index');
 Route::post('/register', 'RegisterController@store');
 

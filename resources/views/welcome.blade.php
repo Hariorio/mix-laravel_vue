@@ -24,28 +24,41 @@
                   </button>
                 </div>
                 @endif
+
+                @if(session()->has('salah'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('salah')}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                @endif
                 <div class="card-body p-md-5 mx-md-4">
                   <div class="text-left mb-4">
                     <img src="img/Logox.png" alt="logo">
                   </div>
                   <h4 class="mt-1 mb-1 pb-1">Login</h4>
                   <p style="color: #677A96">Welcome back, Please fill your Details</p>
-                 <form action="{{ ('/login') }}" method="POST" class="my-login-validation" novalidate="">
+                 <form action="/login" method="POST">
                 @csrf
                     <div class="form-outline mb-2">
-                        <label class="form-label" for="form2Example11"><h6>Username</h6></label>
-                        <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+                        <label class="form-label" for="form2Example11"><h6>Email</h6></label>
+                        <input id="email" type="email  @error('email') is-invalid @enderror" value="{{ old ('email') }} "  class="form-control" name="email">
+                        @error('email')
                         <div class="invalid-feedback">
-                            Email is invalid
+                          {{ $message }}
                         </div>
+                        @enderror
                     </div>
   
                     <div class="form-outline mb-1 mt-3">
                         <label class="form-label" for="form2Example22"><h6>Password</h6></label>
-                        <input id="password" type="password" class="form-control" name="password" required data-eye>
+                        <input id="password" type="password" class="form-control  @error('password') is-invalid @enderror" name="password" data-eye>
+                        @error('password')
                         <div class="invalid-feedback">
-                            Password is required
+                          {{ $message }}
                         </div>
+                        @enderror
                     </div>
 
                     <div class="text-center row mb-5">
