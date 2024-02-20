@@ -29,4 +29,11 @@ class LoginController extends Controller
         return back()->with('salah', 'Login Failed');
 
     }
+
+    function FunctionName() : Returntype {
+        
+
+        
+    }
+
 }
